@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from "react";
+import Box from '@mui/material/Box';
+import SharePriceBox from "./SharePriceBox.js";
+import SideHeading from "./SideHeading.js";
+import SideFooter from "./SideFooter.js";
+import CalculateBox from "./CalculateBox.js";
+import AddButton from "./AddButton.js";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const [inputList, setInputList] = useState([]);
+
+  function handleClick(e){
+    setInputList(inputList.concat(<SharePriceBox />));
+  }
+
+  function handleReset(){
+    setInputList([]);
+  }
+
+  return(
+    <Box>
+      <SideHeading />
+      <Box
+        sx={{
+          width: "27%",
+          backgroundColor: "#FFBC42",
+          margin: "5rem auto",
+          borderRadius: 4,
+          opacity: 0.4
+        }}
+      >
+        <SharePriceBox />
+        <SharePriceBox />
+        {inputList}
+        <AddButton handleClick={handleClick}/>
+        <CalculateBox handleReset={handleReset}/>
+      </Box>
+      <SideFooter />
+    </Box>
   );
 }
 

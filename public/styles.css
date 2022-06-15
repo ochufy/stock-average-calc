@@ -1,0 +1,13 @@
+body {
+  background-color: #f0e8d8;
+  background-image: url("axiom-pattern.png");
+}
+
+html {
+  overflow-y: scroll;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #5F9959 #b4e7b8;
+}
