@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/stock-average-calc/static/js/main.05e78bb0.js",
+    "index.html": "/stock-average-calc/index.html",
+    "main.05e78bb0.js.map": "/stock-average-calc/static/js/main.05e78bb0.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.05e78bb0.js"
+  ]
+}
